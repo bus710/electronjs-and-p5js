@@ -78,13 +78,11 @@ For index.html
   </head>
   <body>
     <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
     We are using Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
 
     <script>
-      // You can also require other files to run in this process
       require('./renderer.js')
     </script>
   </body>
@@ -121,7 +119,7 @@ package.json
 
 ## Get Electron binary
 
-- Start Code's terminal by pressing **CTRL+\` **.
+- Start Code's terminal by pressing **CTRL+\`**.
 - Run **npm init** in the terminal.
 - Specify app/main.js for the entry point.
 - Also, run **npm install --save-dev electron**.
