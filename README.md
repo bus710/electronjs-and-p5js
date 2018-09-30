@@ -23,6 +23,7 @@ Node is the framework we have to use and I would like to try the current version
 Code became so popular as a proper IDE for various projects.
 - https://code.visualstudio.com/
 - After downloding, just run the executable as well.
+- I use Vim and Debugger-for-Chrome extensions.
   
 ## Kick Off
 
@@ -30,4 +31,7 @@ Code became so popular as a proper IDE for various projects.
 - Then run Code and open the folder just made.
 - Make another foler "app" in "Test".
 - And make couple of files - index.html, style.css, main.js, and renderer.js.
+- Start Code's terminal by pressing **CTRL+`**.
+- Run **npm init** in the terminal.
+- Specify app/main.js for the entry point.
 
