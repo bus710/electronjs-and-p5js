@@ -120,6 +120,35 @@ package.json
 
 - Start Code's terminal by pressing **CTRL+\`**.
 - Run **npm install** in the terminal.
+
+## Debugging the main process with Code
+  
+https://electronjs.org/docs/tutorial/debugging-main-process-vscode
+
+In **.vscode** under the root directory, a launch.json file needs to be made.
+Then,
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Main Process",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+            },
+            "args": [
+                "."
+            ]
+        }
+    ]
+}
+```
+
+Now, the debugging tab can show us a new menu to run the debugger.  
   
 ## Get p5.js
   
