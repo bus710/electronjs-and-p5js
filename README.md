@@ -7,10 +7,14 @@ After some research I wanted to give a shot to the combination of Electron.js an
 
 * SJ Kim
 * bus710@gmail.com
+
+## Index  
+  
+TBD...
   
 ## Get Node.js  
   
-Node is the framework we have to use and I would like to try the current version.  
+Node is the framework we have to use and I would like to try the current version (10 as of 2018/09).  
 - https://nodejs.org/en/download/current/
 - After downloading, just run the executable.
   
@@ -20,3 +24,10 @@ Code became so popular as a proper IDE for various projects.
 - https://code.visualstudio.com/
 - After downloding, just run the executable as well.
   
+## Kick Off
+
+- Before run Code, make a folder. I made a folder "Test" in my Desktop.
+- Then run Code and open the folder just made.
+- Make another foler "app" in "Test".
+- And make couple of files - index.html, style.css, main.js, and renderer.js.
+
