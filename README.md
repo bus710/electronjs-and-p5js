@@ -27,9 +27,13 @@ Code became so popular as a proper IDE for various projects.
   
 ## Kick Off
 
+In fact, this part is just same as the official guide.  
+https://electronjs.org/docs/tutorial/first-app  
+
+But I added some lines to integrate with Code.  
+  
 - Before run Code, make a folder. I made a folder "Test" in my Desktop.
 - Then run Code and open the folder just made.
-- Make another foler "app" in "Test".
 - And make couple of files - index.html, style.css, main.js, and renderer.js.
 - Start Code's terminal by pressing **CTRL+`**.
 - Run **npm init** in the terminal.
