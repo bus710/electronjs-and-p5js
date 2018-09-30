@@ -14,7 +14,7 @@ TBD...
   
 ## Get Node.js  
   
-Node is the framework we have to use and I would like to try the current version (10 as of 2018/09).  
+Node is the framework we have to use and I would like to try the current version (node-v10.11.0-x64.msi as of 2018/09).  
 - https://nodejs.org/en/download/current/
 - After downloading, just run the executable.
   
