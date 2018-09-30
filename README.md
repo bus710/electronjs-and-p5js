@@ -1,7 +1,6 @@
 # electronjs-and-p5js
 
-I am not an IT professional but need to make a simple GUI to provide user interface along with my boards.  
-After some research I wanted to give a shot to the combination of Electron.js and P5.js.
+For my personal note to make a simple combination of Electron.js and p5.js.
 
 ## Writer
 
@@ -120,9 +119,7 @@ package.json
 ## Get Electron binary
 
 - Start Code's terminal by pressing **CTRL+\`**.
-- Run **npm init** in the terminal.
-- Specify app/main.js for the entry point.
-- Also, run **npm install --save-dev electron**.
+- Run **npm install** in the terminal.
   
 ## Get p5.js
   
