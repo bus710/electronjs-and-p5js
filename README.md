@@ -278,7 +278,7 @@ Now, the debugging tab can show us a new menu to run the debugger (and the short
 This is a super simple process to have the minimal setting of the combination between Electron.js and p5.js.  
 We saw from the installation of the framework and IDE.  
 Also the minimum code to show the nice and dynamic canvas.  
-Finally, based the debugging feature we can develop the main process to interact with our system.  
+Finally, based on the debugging feature we can develop the main process to interact with our system.  
 
 
 
