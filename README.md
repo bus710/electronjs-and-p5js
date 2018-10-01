@@ -14,6 +14,7 @@ For my personal note to make a simple combination of Electron.js and p5.js.
 - Get Node.js  
 - Get Visual Studio Code
 - Kick Off
+- Put some code for the files
 - Get some required modules
 - Debugging the main process with Code
   
@@ -48,9 +49,11 @@ The steps are:
 -- renderer.js
 -- and sketch.js
   
+## Put some code for the files
+
 Write contents for the files.  
   
-package.json
+For package.json
 ```
 {
   "name": "test",
@@ -66,10 +69,7 @@ package.json
     "p5.js"
   ],
   "author": "GitHub",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "electron": "^3.0.0"
-  }
+  "license": "CC0-1.0"
 }
 ```
 
@@ -77,20 +77,20 @@ For index.html
 ```
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
 
-    <script>
-      require('./renderer.js')
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <script language="javascript" type="text/javascript" src="./node_modules/p5/lib/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="./sketch.js"></script>
+</head>
+
+<body>
+</body>
+
+<script>
+  require('./renderer.js')
+</script>
 </html>
 ```
 
@@ -278,6 +278,7 @@ Now, the debugging tab can show us a new menu to run the debugger.
 This is a super simple process to have the minimal setting of the combination between Electron.js and p5.js.  
 We saw from the installation of the framework and IDE.  
 Also the minimum code to show the nice and dynamic canvas.  
+Finally, based the debugging feature we can develop the main process to interact with our system.  
 
 
 
