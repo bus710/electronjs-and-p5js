@@ -269,7 +269,7 @@ Then,
 }
 ```
 
-Now, the debugging tab can show us a new menu to run the debugger.  
+Now, the debugging tab can show us a new menu to run the debugger (and the shortcut is F5).
   
 ----
 
