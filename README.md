@@ -142,11 +142,19 @@ app.on('activate', () => {
   
 For renderer.js
 ```
-/* Nothing for now. */
+myEmitter.on('event', () => {
+    console.log('an event occurred!');
+});
+
+console.log("renderer!");
 ```
   
 For sketch.js (Thanks to Garcia Del Castillo)
 ```
+const EventEmitter = require('events');
+class MyEmitter extends EventEmitter {}
+const myEmitter = new MyEmitter();
+
 const easerCount = 500
 const easing = 0.05
 const diameter = 10
@@ -179,6 +187,7 @@ function mousePressed() {
     for (let i = 0; i < easer.length; i++) {
         easer[i].setTarget(mouseX, mouseY)
     }
+    myEmitter.emit('event');
 }
 
 function windowResized() {
