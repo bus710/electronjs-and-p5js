@@ -1,3 +1,7 @@
+const EventEmitter = require('events');
+class MyEmitter extends EventEmitter {}
+const myEmitter = new MyEmitter();
+
 const easerCount = 500
 const easing = 0.05
 const diameter = 10
@@ -30,6 +34,7 @@ function mousePressed() {
     for (let i = 0; i < easer.length; i++) {
         easer[i].setTarget(mouseX, mouseY)
     }
+    myEmitter.emit('event');
 }
 
 function windowResized() {
