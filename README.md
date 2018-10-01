@@ -16,7 +16,7 @@ My personal note to make a simple combination of Electron.js and p5.js.
 - Kick Off
 - Put some code for the files
 - Get some required modules
-- Debugging the main process with Code
+- Debugging the main process with vscode
   
 ## Get Node.js  
   
@@ -24,9 +24,9 @@ Node is the framework we have to use and I would like to try the current version
 - https://nodejs.org/en/download/current/
 - After downloading, just run the executable.
   
-## Get Visual Studio Code
+## Get Visual Studio Code (vscode)
   
-Code became so popular as a proper IDE for various projects.
+Vsode became so popular as a proper IDE for various projects.
 - https://code.visualstudio.com/
 - After downloding, just run the executable as well.
 - I use Vim and Debugger-for-Chrome extensions.
@@ -39,8 +39,8 @@ I referred couple of repos:
 
 The steps are:
   
-- Before run Code, make a folder (I made a folder "Test" in my Desktop).
-- Then run Code and open the folder just made.
+- Before run vscode, make a folder (I made a folder "Test" in my Desktop).
+- Then run vscode and open the folder just made.
 - And make couple of files like:
 -- package.json
 -- index.html
@@ -219,7 +219,7 @@ function Easer(xpos, ypos, diameter, newEasing) {
 
 ## Get some required modules
 
-Start Code's terminal by pressing **CTRL+\`**.
+Start vscode's terminal by pressing **CTRL+\`**.
 
 To get Electron.js:
 ```
@@ -241,12 +241,12 @@ And finally:
 $ npm start
 ```
   
-## Debugging the main process with Code
+## Debugging the main process with vscode
   
 I referred a repo as below:  
 https://electronjs.org/docs/tutorial/debugging-main-process-vscode  
 
-In **.vscode** under the root directory, a launch.json file needs to be made.  
+In the **.vscode** directory under the root directory, a launch.json file needs to be made.  
 Then,  
 ```
 {
