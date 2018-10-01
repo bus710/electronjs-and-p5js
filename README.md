@@ -153,15 +153,17 @@ Now, the debugging tab can show us a new menu to run the debugger.
   
 ## Get p5.js
 
-In the terminal, type these:
+In the terminal, type this:  
 ```
 $ npm install --save-dev p5
 ```
   
 ## Edit the files to make a p5 sketch
 
-I also referred a repo:
+I also referred a repo:  
 https://github.com/garciadelcastillo/p5js-electron-templates
   
-
+Add a file called "sketch.js".  
+And edit files as below.  
   
+
