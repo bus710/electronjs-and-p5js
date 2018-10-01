@@ -1,6 +1,6 @@
 # electronjs-and-p5js
 
-For my personal note to make a simple combination of Electron.js and p5.js.
+My personal note to make a simple combination of Electron.js and p5.js.
 
 ## Writer
 
