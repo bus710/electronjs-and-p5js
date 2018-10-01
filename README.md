@@ -6,10 +6,16 @@ For my personal note to make a simple combination of Electron.js and p5.js.
 
 * SJ Kim
 * bus710@gmail.com
+  
+----
 
 ## Index  
   
-TBD...
+- Get Node.js  
+- Get Visual Studio Code
+- Kick Off
+- Get some required modules
+- Debugging the main process with Code
   
 ## Get Node.js  
   
@@ -26,17 +32,79 @@ Code became so popular as a proper IDE for various projects.
   
 ## Kick Off
 
-In fact, this part is just same as the official guide.  
-https://electronjs.org/docs/tutorial/first-app  
+I referred couple of repos:  
+- https://electronjs.org/docs/tutorial/first-app  
+- https://github.com/garciadelcastillo/p5js-electron-templates
 
-But I added some lines to integrate with Code.  
+The steps are:
   
-- Before run Code, make a folder. I made a folder "Test" in my Desktop.
+- Before run Code, make a folder (I made a folder "Test" in my Desktop).
 - Then run Code and open the folder just made.
-- And make couple of files - index.html, style.css, main.js, and renderer.js.
+- And make couple of files like:
+-- package.json
+-- index.html
+-- style.css
+-- main.js
+-- renderer.js
+-- and sketch.js
   
 Write contents for the files.  
   
+package.json
+```
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "p5.js"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^3.0.0"
+  }
+}
+```
+
+For index.html
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+    <script>
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
+```
+
+For syle.css
+```
+body {
+    padding: 0; 
+    margin: 0; 
+    background: #000000; 
+    overflow-x:hidden; 
+    overflow-y: hidden
+}
+```
+
 For main.js
 ```
 const { app, BrowserWindow } = require('electron')
@@ -66,61 +134,113 @@ app.on('activate', () => {
   }
 })
 ```
-
-For index.html
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
-    <script>
-      require('./renderer.js')
-    </script>
-  </body>
-</html>
-```
-
+  
 For renderer.js
 ```
 /* Nothing for now. */
 ```
-
-package.json
+  
+For sketch.js (Thanks to Garcia Del Castillo)
 ```
-{
-  "name": "test",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "repository": "",
-  "keywords": [
-    "Electron",
-    "p5.js"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "electron": "^3.0.0"
-  }
+const easerCount = 500
+const easing = 0.05
+const diameter = 10
+let easer = []
+
+console.log("sketch!")
+
+function setup() {
+    createCanvas(windowWidth, windowHeight)
+    console.log(`${windowWidth}, ${windowHeight}`)
+    noStroke()
+    background(255)
+
+    for (let i = 0; i < easerCount; i++) {
+        let e = new Easer(width / 2, height / 2, diameter, easing)
+        easer.push(e)
+    }
+}
+
+function draw() {
+    background(255)
+
+    for (let i = 0; i < easer.length; i++) {
+        easer[i].update()
+        easer[i].render()
+    }
+}
+
+function mousePressed() {
+    for (let i = 0; i < easer.length; i++) {
+        easer[i].setTarget(mouseX, mouseY)
+    }
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight)
+}
+
+function Easer(xpos, ypos, diameter, newEasing) {
+    this.x = xpos
+    this.y = ypos
+    this.targetX = this.x
+    this.targetY = this.y
+    this.d = diameter
+    this.ease = newEasing
+    this.clr = color(random(0, 255), random(0, 255), random(0, 255), 127)
+
+    this.render = function () {
+        fill(this.clr)
+        ellipse(this.x, this.y, this.d, this.d)
+    }
+
+    this.update = function () {
+        let dx = this.targetX - this.x
+        let dy = this.targetY - this.y
+        if (abs(dx) > 0.1 || abs(dy) > 0.1) {
+            this.x += dx * this.ease
+            this.y += dy * this.ease
+        } else {
+            this.setRandomTarget()
+        }
+    }
+
+    this.setTarget = function (xpos, ypos) {
+        this.targetX = xpos
+        this.targetY = ypos
+    }
+
+    this.setRandomTarget = function () {
+        this.targetX = random(0, width)
+        this.targetY = random(0, height)
+    }
 }
 ```
 
-## Get Electron binary
+## Get some required modules
 
-- Start Code's terminal by pressing **CTRL+\`**.
-- Run **npm install** in the terminal.
+Start Code's terminal by pressing **CTRL+\`**.
 
+To get Electron.js:
+```
+$ npm install --save-dev electron
+```
+
+To get p5.js:
+```
+$ npm install --save-dev p5
+```
+
+To install as the package.json.
+```
+$ npm install
+```  
+
+And finally:
+```
+$ npm start
+```
+  
 ## Debugging the main process with Code
   
 I referred a repo as below:  
@@ -151,19 +271,14 @@ Then,
 
 Now, the debugging tab can show us a new menu to run the debugger.  
   
-## Get p5.js
+----
 
-In the terminal, type this:  
-```
-$ npm install --save-dev p5
-```
+## Conclusion
   
-## Edit the files to make a p5 sketch
+This is a super simple process to have the minimal setting of the combination between Electron.js and p5.js.  
+We saw from the installation of the framework and IDE.  
+Also the minimum code to show the nice and dynamic canvas.  
 
-I also referred a repo:  
-https://github.com/garciadelcastillo/p5js-electron-templates
-  
-Add a file called "sketch.js".  
-And edit files as below.  
-  
+
+
 
