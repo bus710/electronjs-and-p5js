@@ -272,7 +272,9 @@ Then,
             },
             "args": [
                 "."
-            ]
+            ],
+            "protocol": "inspector",
+            "outputCapture": "std"
         }
     ]
 }
