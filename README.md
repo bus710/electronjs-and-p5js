@@ -29,7 +29,7 @@ Node is the framework we have to use and I would like to try the current version
 Vsode became so popular as a proper IDE for various projects.
 - https://code.visualstudio.com/
 - After downloding, just run the executable as well.
-- I use Vim and Debugger-for-Chrome extensions.
+- I prefer Vim extension but as you like.
   
 ## Kick Off
 
