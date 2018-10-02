@@ -12,7 +12,9 @@
             },
             "args": [
                 "."
-            ]
+            ],
+            "protocol": "inspector",
+            "outputCapture": "std"
         }
     ]
 }
