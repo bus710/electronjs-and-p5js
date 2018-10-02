@@ -245,11 +245,6 @@ To get p5.js:
 $ npm install --save-dev p5
 ```
 
-To install as the package.json.
-```
-$ npm install
-```  
-
 And finally:
 ```
 $ npm start
