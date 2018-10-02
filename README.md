@@ -42,12 +42,12 @@ The steps are:
 - Before run vscode, make a folder (I made a folder "Test" in my Desktop).
 - Then run vscode and open the folder just made.
 - And make couple of files like:  
--- package.json  
--- index.html  
--- style.css  
--- main.js  
--- renderer.js  
--- and sketch.js  
+    - package.json  
+    - index.html  
+    - style.css  
+    - main.js  
+    - renderer.js  
+    - and sketch.js  
   
 ## Put some code for the files
 
