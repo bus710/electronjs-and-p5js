@@ -242,7 +242,7 @@ $ npm install --save-dev electron
 
 To get p5.js:
 ```
-$ npm install --save-dev p5
+$ npm install --save p5
 ```
 
 And finally:
@@ -281,6 +281,37 @@ Then,
 ```
 
 Now, the debugging tab can show us a new menu to run the debugger (and the shortcut is F5).
+
+## Tip for Windows
+    
+My original goal for this is connecting an external USB-CDC device to this electron application.  
+Since Electron requires to compile some native packages (in my case serialport), electron-rebuild needs to be installed.
+  
+In the package.json file some sections were updated as below (this is not the entire file!).
+```
+{
+  "scripts": {
+    "start": "electron .",
+    "install": "electron-rebuild"
+  },
+  "devDependencies": {
+    "electron": "^3.0.2",
+    "electron-rebuild": "^1.8.2"
+  },
+  "dependencies": {
+    "p5": "^0.7.2",
+    "serialport": "^7.0.2"
+  }
+}
+```
+
+Moreover, a global package has to be installed as well in case of Windows.
+```
+// In the admin level power shell
+npm install -g --production windows-build-tools
+```
+  
+After doing the above command, do npm install from the project's root.  
   
 ----
 
