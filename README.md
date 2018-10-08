@@ -84,6 +84,7 @@ For index.html
   <script language="javascript" type="text/javascript" src="./node_modules/p5/lib/p5.js"></script>
   <script language="javascript" type="text/javascript" src="./sketch.js"></script>
   <style> ::-webkit-scrollbar { display: none; } </style>  
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
