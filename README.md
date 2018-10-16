@@ -29,9 +29,10 @@ Node is the framework we have to use and I would like to try the current version
 Vsode became so popular as a proper IDE for various projects.
 - https://code.visualstudio.com/
 - After downloding, just run the executable as well.
-- I prefer couple extensions but as you like.
-![exts.png](exts.png)  
+- I prefer couple extensions but as you like.  
   
+![exts.png](exts.png)   
+   
   
 ## Kick Off
 
