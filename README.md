@@ -31,7 +31,7 @@ Vsode became so popular as a proper IDE for various projects.
 - After downloding, just run the executable as well.
 - I prefer couple extensions but as you like.  
   
-        ![exts.png](exts.png)   
+     ![exts.png](exts.png)   
    
   
 ## Kick Off
