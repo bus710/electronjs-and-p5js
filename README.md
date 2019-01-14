@@ -153,6 +153,12 @@ app.on('activate', () => {
   
 For renderer.js
 ```
+const { ipcRenderer } = require('electron');
+
+var interval = setInterval(() => {
+    console.log('renderer timer');
+}, 1000);
+
 myEmitter.on('event', () => {
     console.log('an event occurred!');
 });
