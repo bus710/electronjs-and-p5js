@@ -69,7 +69,7 @@ For package.json
   "name": "test",
   "version": "1.0.0",
   "description": "A minimal Electron application",
-  "main": "main.js",
+  "main": "./app/main.js",
   "scripts": {
     "start": "electron ."
   },
