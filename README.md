@@ -45,12 +45,19 @@ The steps are:
 - Before run vscode, make a folder (I made a folder "Test" in my Desktop).
 - Then run vscode and open the folder just made.
 - And make couple of files like:  
-    - package.json  
-    - index.html  
-    - style.css  
-    - main.js  
-    - renderer.js  
-    - and sketch.js  
+```
+$ tree
+.
+├── app
+│   ├── index.html
+│   ├── main.js
+│   ├── renderer.js
+│   ├── sketch.js
+│   └── style.css
+└── package.json
+
+1 directory, 6 files
+```
   
 ## Put some code for the files
 
