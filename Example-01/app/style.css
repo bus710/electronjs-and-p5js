@@ -1,0 +1,115 @@
+* {
+  font-family: "Segoe UI", Ubuntu; /* https://css-tricks.com/snippets/css/system-font-stack/ */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  padding: 0; 
+  margin: 0; 
+  display: flex;
+  /* h-align */
+  justify-content: left;
+  /* v-align */
+  align-items: flex-start;
+  background: #333333; 
+  overflow: hidden;
+  overflow-x:hidden; 
+  overflow-y: hidden;
+  position:fixed;
+}
+
+select {
+  background-color: white;
+  color: black;
+  outline: none !important;
+  border-color: black;
+  border-radius: 3px;
+  height: 28px;
+  width: 470px;
+  font-size: 16px;
+  box-shadow: black;
+}
+
+button {
+      background-color: white;
+      color: black;
+      outline: black;
+      border-color: black;
+      border-width: 1px;
+      border-radius: 3px;
+      /* height: 30px; */
+      /* width: 100px; */
+      font-size: 20px;
+}
+
+button:not(:hover) {
+  background-color: #ffffff;
+}
+
+button:hover {
+  background-color: #cccccc;
+}
+
+button:active {
+  background-color: #aaaaaa;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  input[type='range']::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 30px;
+      height: 30px;
+      background: #4CAF50;
+      border-radius: 50%;
+      cursor: pointer;
+      /* cursor: ew-resize;
+      /* box-shadow: -80px 0 0 80px #43e5f7; */
+  }
+}
+
+/* Slider style */
+input {
+width: 140px;
+height: 15px;
+-webkit-appearance: none;
+background: #555555;
+outline: none;
+/* outline-color: #000000; */
+/* outline-width: 1.7px; */
+border-width: 1px;
+border-radius: 3px;
+opacity: 0.7;
+}
+
+/* Slider thumb for Chrome */
+input[type='range']::-webkit-slider-thumb {
+width: 15px;
+height: 25px;
+-webkit-appearance: none;
+appearance: none;
+border: solid;
+border-width: 2px;
+border-color: #000000;
+border-radius: 3px; 
+background: #ffffff;
+cursor: pointer;
+}
+
+/* Slider thumb for FireFox */
+input::-moz-range-thumb {
+width: 15px;
+height: 25px;
+-webkit-appearance: none;
+appearance: none;
+border: solid;
+border-width: 2px;
+border-color: #000000;
+border-radius: 3px; 
+background: #ffffff;
+cursor: pointer;
+}

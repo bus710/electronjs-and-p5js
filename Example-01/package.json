@@ -1,0 +1,31 @@
+{
+  "name": "test-tls-electron-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./app/main.js",
+  "scripts": {
+    "start": "electron .",
+    "install": "electron-rebuild",
+    "build": "electron-packager . test-tls-electron-client --asar --extraResource=\"./keys\""
+  },
+  "repository": "https://github.com/bus710/jsws",
+  "keywords": [
+    "Electron",
+    "p5.js"
+  ],
+  "author": "bus710 <bus710@gmail.com>",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "asar": "^0.14.6",
+    "electron": "^3.0.2",
+    "electron-packager": "^13.0.1",
+    "electron-rebuild": "^1.8.2"
+  },
+  "dependencies": {
+    "electron-debug": "^2.0.0",
+    "p5": "^0.7.2",
+    "serialport": "^7.0.2",
+    "ws": "6.2.0",
+    "axios": "0.18.0"
+  }
+}
